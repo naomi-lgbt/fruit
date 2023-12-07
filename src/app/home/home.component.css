@@ -1,8 +1,24 @@
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 p {
   font-size: 2rem;
   margin: 10px 0;
+}
+
+img {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  img {
+    display: block;
+    width: 250px;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
 }

@@ -13,7 +13,7 @@ h6 {
   font-size: 3rem;
 }
 
-p {
+p, a {
   font-size: 2rem;
   margin: 10px 0;
 }
@@ -29,4 +29,20 @@ table {
 
 .md {
   text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 2.5rem;
+  }
+  p, a {
+    font-size: 2rem;
+  }
 }
