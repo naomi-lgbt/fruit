@@ -79,8 +79,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://lore.naomi.lgbt",
-            "cname": "lore.naomi.lgbt",
+            "baseHref": "https://fruit.naomi.lgbt",
+            "cname": "fruit.naomi.lgbt",
             "name": "Naomi Carrigan",
             "email": "nhcarrigan@gmail.com"
           }
