@@ -1,0 +1,27 @@
+<h1>Contact Me</h1>
+<p>Hey I appreciate you taking the time to come to my links! Find me here:</p>
+<a
+  class="social"
+  *ngFor="let social of data"
+  href="{{ social.url }}"
+  target="_blank"
+  rel="noopener noreferrer"
+  (mouseenter)="social.hover = true"
+  (mouseleave)="social.hover = false"
+  [ngStyle]="
+    social.hover
+      ? {
+          background: social.text,
+          color: social.background,
+          'border-color': social.background
+        }
+      : {
+          background: social.background,
+          color: social.text,
+          'border-color': social.text
+        }
+  "
+>
+  <fa-icon [icon]="social.icon"></fa-icon>
+  <p>{{ social.name }}</p>
+</a>
