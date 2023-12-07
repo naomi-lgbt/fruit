@@ -1,1 +1,12 @@
-<p>blog works!</p>
+<div *ngIf="!slug">
+  <h1>My Blog</h1>
+  <p>Here are my latest blog posts:</p>
+  <ul>
+    <li>
+      <a routerLink="/blog/example">Naomi was Here</a>
+    </li>
+  </ul>
+</div>
+<div *ngIf="markdown" class="md">
+  <markdown>{{ markdown }}</markdown>
+</div>

@@ -1,0 +1,32 @@
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+a,
+a:visited {
+  color: var(--text);
+}
+
+table {
+  margin: auto;
+}
+
+.md {
+  text-align: center;
+}
