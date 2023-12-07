@@ -13,7 +13,8 @@ h6 {
   font-size: 3rem;
 }
 
-p, a {
+p,
+a {
   font-size: 2rem;
   margin: 10px 0;
 }
@@ -31,6 +32,34 @@ table {
   text-align: center;
 }
 
+ul {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+li h2 {
+  font-size: 2.5rem;
+}
+
+.link-btn,
+.link-btn:visited {
+  height: 2rem;
+  font-size: 1.5rem;
+  background-color: var(--text);
+  color: var(--background);
+}
+
+.link-btn:hover {
+  color: var(--text);
+  background-color: var(--background);
+}
+
 @media screen and (max-width: 750px) {
   h1 {
     font-size: 3rem;
@@ -42,7 +71,8 @@ table {
   h6 {
     font-size: 2.5rem;
   }
-  p, a {
+  p,
+  a {
     font-size: 2rem;
   }
 }

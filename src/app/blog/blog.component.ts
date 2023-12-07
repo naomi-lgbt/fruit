@@ -5,11 +5,18 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FileService } from '../file.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Post } from '../../interfaces/Post';
+import { TagComponent } from '../tag/tag.component';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule, MarkdownModule, HttpClientModule, RouterModule],
+  imports: [
+    CommonModule,
+    MarkdownModule,
+    HttpClientModule,
+    RouterModule,
+    TagComponent,
+  ],
   providers: [provideMarkdown()],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
@@ -28,7 +35,7 @@ export class BlogComponent {
       return;
     }
     this.service.loadPost(this.slug).subscribe((m) => {
-      const [, frontMatter, ...content] = m.split('---');
+      const [, , ...content] = m.split('---');
       this.markdown = content.join('---');
     });
   }
