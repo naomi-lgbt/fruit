@@ -1,3 +1,9 @@
+---
+title: "Naomi was here"
+date: "2023-12-07"
+tags: [naomi, template]
+---
+
 # Naomi Was Here
 
 This is just an example of what a blog post might look like.

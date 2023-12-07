@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "node loadPostList.js",
     "start": "ng serve",
+    "prebuild": "node loadPostList.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
