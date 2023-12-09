@@ -35,7 +35,7 @@ jobs:
           echo "hi" > ./.nojekyll
           git config --global user.name Naomi Carrigan
           git config --global user.email nhcarrigan@gmail.com
-          git checkout gh-pages
+          git checkout -b gh-pages
           git add .
           git commit -m "chore: ignore jekyll"
-          git push
+          git push -u origin gh-pages
