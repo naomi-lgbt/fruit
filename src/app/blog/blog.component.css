@@ -24,10 +24,6 @@ a:visited {
   color: var(--text);
 }
 
-table {
-  margin: auto;
-}
-
 .md {
   text-align: center;
 }

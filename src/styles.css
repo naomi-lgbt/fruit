@@ -31,3 +31,34 @@ body::after {
   opacity: 0.1;
   pointer-events: none;
 }
+
+/* Markdown Overrides */
+
+markdown pre {
+  max-width: 750px;
+  width: 95%;
+  margin: auto !important;
+}
+
+markdown img {
+  max-width: 100%;
+}
+
+markdown table {
+  margin: auto !important;
+}
+
+markdown th,
+markdown td {
+  border: 1px solid var(--text);
+}
+
+markdown ul,
+markdown ol {
+  list-style-position: inside;
+}
+
+markdown a,
+markdown a:visited {
+  color: var(--text);
+}
