@@ -36,6 +36,8 @@ jobs:
           git config --global user.name Naomi Carrigan
           git config --global user.email nhcarrigan@gmail.com
           git checkout -b gh-pages
+          git fetch origin
+          git reset --hard origin/gh-pages
           git add .
           git commit -m "chore: ignore jekyll"
           git push -u origin gh-pages
