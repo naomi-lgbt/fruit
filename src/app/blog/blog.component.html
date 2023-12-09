@@ -1,0 +1,20 @@
+<div *ngIf="!slug">
+  <h1>My Blog</h1>
+  <p>Here are my latest blog posts:</p>
+  <ul>
+    <li *ngFor="let post of posts">
+      <div class="post">
+        <h2>{{ post.title }}</h2>
+        <div class="tags">
+          <app-tag *ngFor="let tag of post.tags" [tagName]="tag">{{
+            tag
+          }}</app-tag>
+        </div>
+      </div>
+      <a class="link-btn" routerLink="/blog/{{ post.slug }}">Read Post</a>
+    </li>
+  </ul>
+</div>
+<div *ngIf="markdown" class="md">
+  <markdown class="post">{{ markdown }}</markdown>
+</div>
