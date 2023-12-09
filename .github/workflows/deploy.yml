@@ -29,3 +29,12 @@ jobs:
         run: |
           pnpm install
           pnpm run deploy
+
+      - name: No Jekyll
+        run: |
+          echo "hi" > ./.nojekyll
+          git config --global user.name Naomi Carrigan
+          git config --global user.email nhcarrigan@gmail.com
+          git add .
+          git commit -m "chore: ignore jekyll"
+          git push
