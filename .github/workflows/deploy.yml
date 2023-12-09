@@ -32,6 +32,7 @@ jobs:
 
       - name: No Jekyll
         run: |
+          echo "/dist/\n/node_modules/" > ./.gitignore
           echo "hi" > ./.nojekyll
           git config --global user.name Naomi Carrigan
           git config --global user.email nhcarrigan@gmail.com
