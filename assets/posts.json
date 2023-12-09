@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Naomi was here",
+    "date": "2023-12-07T08:00:00.000Z",
+    "tags": [
+      "naomi",
+      "template"
+    ],
+    "content": "\n\n# Naomi Was Here\n\nThis is just an example of what a blog post might look like.\n\n## This is a sub-heading...\n\n### And here's some other cool stuff:\n\nHere's some code, `<div></div>`, between 2 backticks.\n\n````js\n// this is multi-line code:\n\nfunction anotherExample(firstLine, lastLine) {\n  if (firstLine == \"```\" && lastLine == \"```\") {\n    return multiLineCode;\n  }\n}\n````\n\nYou can also make text **bold**... whoa!\nOr _italic_.\nOr... wait for it... **_both!_**\nAnd feel free to go crazy ~~crossing stuff out~~.\n\nThere's also [links](https://www.freecodecamp.org), and\n\n> Block Quotes!\n\nAnd if you want to get really crazy, even tables:\n\n| Wild Header      | Crazy Header    | Another Header?    |\n| ---------------- | --------------- | ------------------ |\n| Your content can | be here, and it | can be here....    |\n| And here.        | Okay.           | I think we get it. |\n\n- And of course there are lists.\n  - Some are bulleted.\n    - With different indentation levels.\n      - That look like this.\n\n1. And there are numbered lists too.\n1. Use just 1s if you want!\n1. And last but not least, let's not forget embedded images:\n\n![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)\n",
+    "slug": "example"
+  },
+  {
+    "title": "Delete after testing",
+    "date": "2021-11-11T08:00:00.000Z",
+    "tags": [
+      "stimky"
+    ],
+    "content": "\n\nThis is bad.\n",
+    "slug": "delete"
+  }
+]
