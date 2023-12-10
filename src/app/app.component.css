@@ -21,7 +21,7 @@ main {
   }
 }
 
-@media screen and (max-height: 200px) {
+@media screen and (max-height: 250px) {
   main {
     left: 0;
     top: 50px;
