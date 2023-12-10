@@ -20,3 +20,11 @@ main {
     top: 100px;
   }
 }
+
+@media screen and (max-height: 200px) {
+  main {
+    left: 0;
+    top: 50px;
+    width: 100%;
+  }
+}
