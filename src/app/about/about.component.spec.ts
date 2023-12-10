@@ -26,9 +26,18 @@ describe('AboutComponent', () => {
     const header = compiled.querySelector('h1');
     expect(header?.innerText.trim()).toBe('About Me');
     const paragraphs = compiled.querySelectorAll('p');
-    expect(paragraphs).toHaveSize(1);
+    expect(paragraphs).toHaveSize(4);
     expect(paragraphs[0]?.innerText.trim()).toBe(
-      'Just out here doing my thing. 29 🔞🏳️‍🌈'
+      'I currently work as a Systems Administrator. I am looking to further my knowledge in technology so that I can build my skills.'
+    );
+    expect(paragraphs[1]?.innerText.trim()).toBe(
+      'I am looking to transition into more development-focused work, and have been studying various programming languages for that.'
+    );
+    expect(paragraphs[2]?.innerText.trim()).toBe(
+      'Outside of my work, I also enjoy gaming and occasionally streaming.'
+    );
+    expect(paragraphs[3]?.innerText.trim()).toBe(
+      'I dabble a bit in art as well.'
     );
   });
 });

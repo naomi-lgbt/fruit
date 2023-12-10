@@ -46,7 +46,7 @@ describe('ContactComponent', () => {
     const paragraphs = compiled.querySelectorAll('p');
     expect(paragraphs).toHaveSize(1 + socials.length);
     expect(paragraphs[0]?.innerText.trim()).toBe(
-      'Hey I appreciate you taking the time to come to my links! Find me here:'
+      'Here are the methods you can use to contact me, sorted by preference:'
     );
     const links = compiled.querySelectorAll('a');
     expect(links).toHaveSize(socials.length);

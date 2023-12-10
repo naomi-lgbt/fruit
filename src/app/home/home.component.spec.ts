@@ -26,12 +26,13 @@ describe('HomeComponent', () => {
     const header = compiled.querySelector('h1');
     expect(header?.innerText.trim()).toBe("Hi, I'm Fruit Pursuits");
     const paragraphs = compiled.querySelectorAll('p');
-    expect(paragraphs).toHaveSize(2);
-    expect(paragraphs[0]?.innerText.trim()).toBe(
-      'I currently work as a Systems Administrator. I am looking to further my knowledge in technology so that I can build my skills.'
-    );
+    expect(paragraphs).toHaveSize(3);
+    expect(paragraphs[0]?.innerText.trim()).toBe('Welcome to my profile site.');
     expect(paragraphs[1]?.innerText.trim()).toBe(
-      'Currently I am studying for JavaScript, ReactJS, the SSCP, and AWS to help build my skills in the field of cloud management / DevOps engineering.'
+      'Here you can read about me, see my work, catch up on my personal blog, or find ways to reach out to me.'
+    );
+    expect(paragraphs[2]?.innerText.trim()).toBe(
+      'Thanks for taking the time to explore - I look forward to hearing from you.'
     );
   });
 });
