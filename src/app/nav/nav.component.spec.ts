@@ -29,7 +29,7 @@ describe('NavComponent', () => {
     const links = compiled.querySelectorAll('a');
     expect(links).toHaveSize(4);
     expect(links[0]?.innerText.trim()).toBe('Home');
-    expect(links[0]?.getAttribute('routerLink')).toBe('/');
+    expect(links[0]?.getAttribute('routerLink')).toBe('/home');
     expect(links[1]?.innerText.trim()).toBe('About');
     expect(links[1]?.getAttribute('routerLink')).toBe('/about');
     expect(links[2]?.innerText.trim()).toBe('Blog');

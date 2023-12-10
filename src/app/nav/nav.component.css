@@ -30,6 +30,12 @@ a:visited {
   text-shadow: var(--glow) 0px 0px 50px;
 }
 
+.flex-column a.nav-active {
+  color: var(--background);
+  background: var(--text);
+  border: 1px solid var(--background);
+}
+
 @media screen and (max-width: 750px) {
   .avatar {
     display: none;
