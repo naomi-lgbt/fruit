@@ -27,7 +27,7 @@ describe('NavComponent', () => {
     const avatar = compiled.querySelector('.avatar');
     expect(avatar?.getAttribute('src')).toBe('/assets/img/avatar.jpg');
     const links = compiled.querySelectorAll('a');
-    expect(links).toHaveSize(4);
+    expect(links).toHaveSize(5);
     expect(links[0]?.innerText.trim()).toBe('Home');
     expect(links[0]?.getAttribute('routerLink')).toBe('/home');
     expect(links[1]?.innerText.trim()).toBe('About');

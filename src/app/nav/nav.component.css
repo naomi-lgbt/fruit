@@ -1,7 +1,7 @@
 nav {
   width: 250px;
   height: 100vh;
-  position: sticky;
+  position: fixed;
   border-right: 2px solid var(--text);
 }
 
@@ -36,6 +36,37 @@ a:visited {
   border: 1px solid var(--background);
 }
 
+.copyright {
+  position: fixed;
+  bottom: 2rem;
+  height: 50px;
+  font-size: 1.5rem;
+  width: 200px;
+}
+
+@media screen and (max-height: 500px) {
+  .avatar {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 250px) {
+  nav {
+    width: 100%;
+    height: 50px;
+    border: none;
+  }
+
+  .flex-column {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .copyright {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .avatar {
     display: none;
@@ -50,6 +81,10 @@ a:visited {
   .flex-column {
     width: 100%;
     flex-direction: row;
+  }
+
+  .copyright {
+    display: none;
   }
 }
 
