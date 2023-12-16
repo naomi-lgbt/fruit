@@ -1,33 +1,45 @@
-import { CommonModule } from '@angular/common';
-import { Component, InjectionToken, SecurityContext } from '@angular/core';
-import { MarkdownModule, provideMarkdown } from 'ngx-markdown';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import { FileService } from '../file.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Post } from '../../interfaces/Post';
-import { TagComponent } from '../tag/tag.component';
+import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
+import { Component } from "@angular/core";
+import { ActivatedRoute, RouterModule } from "@angular/router";
+import { MarkdownModule, provideMarkdown } from "ngx-markdown";
 
+import { Post } from "../../interfaces/Post";
+import { FileService } from "../file.service";
+import { TagComponent } from "../tag/tag.component";
+
+/**
+ *
+ */
 @Component({
-  selector: 'app-blog',
+  selector: "app-blog",
   standalone: true,
   imports: [
     CommonModule,
     MarkdownModule,
     HttpClientModule,
     RouterModule,
-    TagComponent,
+    TagComponent
   ],
   providers: [provideMarkdown()],
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.css',
+  templateUrl: "./blog.component.html",
+  styleUrl: "./blog.component.css"
 })
 export class BlogComponent {
-  public slug = '';
-  public markdown = '';
+  public slug = "";
+  public markdown = "";
   public posts: Post[] = [];
 
-  constructor(private route: ActivatedRoute, private service: FileService) {
-    this.slug = this.route.snapshot.params['slug'] ?? '';
+  /**
+   *
+   * @param {ActivatedRoute} route - The activated route, providing access to the route parameters.
+   * @param {FileService} service - The file service responsible for loading data.
+   */
+  constructor(
+    private route: ActivatedRoute,
+    private service: FileService
+  ) {
+    this.slug = this.route.snapshot.params["slug"] ?? "";
     if (!this.slug) {
       this.service
         .loadList()
@@ -35,8 +47,8 @@ export class BlogComponent {
       return;
     }
     this.service.loadPost(this.slug).subscribe((m) => {
-      const [, , ...content] = m.split('---');
-      this.markdown = content.join('---');
+      const [, , ...content] = m.split("---");
+      this.markdown = content.join("---");
     });
   }
 }
