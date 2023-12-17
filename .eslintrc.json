@@ -1,3 +1,7 @@
 {
-  "extends": "@nhcarrigan/eslint-config-angular"
+  "extends": "@nhcarrigan/eslint-config-angular",
+  "rules": {
+    // TODO: Remove once the package is updated.
+    "import/no-unresolved": "off"
+  }
 }
