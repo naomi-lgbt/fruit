@@ -1,10 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-import { BlogComponent } from './blog.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { Router } from '@angular/router';
+import { BlogComponent } from "./blog.component";
 
-describe('BlogComponent', () => {
+describe("BlogComponent", () => {
   let component: BlogComponent;
   let fixture: ComponentFixture<BlogComponent>;
   let compiled: HTMLElement;
@@ -15,14 +14,14 @@ describe('BlogComponent', () => {
         BlogComponent,
         RouterTestingModule.withRoutes([
           {
-            path: 'blog',
+            path: "blog",
             component: BlogComponent,
             data: {
-              slug: 'example',
-            },
-          },
-        ]),
-      ],
+              slug: "example"
+            }
+          }
+        ])
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(BlogComponent);
@@ -31,14 +30,14 @@ describe('BlogComponent', () => {
     compiled = fixture.nativeElement;
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render correctly', () => {
-    const header = compiled.querySelector('h1');
-    expect(header?.innerText.trim()).toBe('My Blog');
-    const paragraph = compiled.querySelector('p');
-    expect(paragraph?.innerText.trim()).toBe('Here are my latest blog posts:');
+  it("should render correctly", () => {
+    const header = compiled.querySelector("h1");
+    expect(header?.innerText.trim()).toBe("My Blog");
+    const paragraph = compiled.querySelector("p");
+    expect(paragraph?.innerText.trim()).toBe("Here are my latest blog posts:");
   });
 });

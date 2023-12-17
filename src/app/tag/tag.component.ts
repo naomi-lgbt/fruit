@@ -1,16 +1,24 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
+/**
+ *
+ */
 @Component({
-  selector: 'app-tag',
+  selector: "app-tag",
   standalone: true,
   imports: [],
-  templateUrl: './tag.component.html',
-  styleUrl: './tag.component.css',
+  templateUrl: "./tag.component.html",
+  styleUrl: "./tag.component.css"
 })
 export class TagComponent {
-  @Input() tagName: string = '';
+  @Input() tagName = "";
 
-  public getHex() {
+  /**
+   * Generates a hexadecimal color code based on the tagName property.
+   *
+   * @returns {string} A hexadecimal color code.
+   */
+  public getHex(): string {
     let hash = 0;
 
     for (let i = 0; i < this.tagName.length; i++) {
@@ -18,9 +26,8 @@ export class TagComponent {
     }
 
     const hex = (hash & 0x00ffffff).toString(16).toUpperCase();
-    return `${'00000'.substring(0, 6 - hex.length)}${hex}`;
+    return `${"00000".substring(0, 6 - hex.length)}${hex}`;
   }
-
   public getColour = () => {
     const hex = this.getHex();
     // https://css-tricks.com/converting-color-spaces-in-javascript/#aa-hex-to-hsl

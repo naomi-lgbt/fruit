@@ -1,16 +1,16 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-import { NavComponent } from './nav.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { NavComponent } from "./nav.component";
 
-describe('NavComponent', () => {
+describe("NavComponent", () => {
   let component: NavComponent;
   let fixture: ComponentFixture<NavComponent>;
   let compiled: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavComponent, RouterTestingModule],
+      imports: [NavComponent, RouterTestingModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(NavComponent);
@@ -19,22 +19,22 @@ describe('NavComponent', () => {
     compiled = fixture.nativeElement;
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render correctly', () => {
-    const avatar = compiled.querySelector('.avatar');
-    expect(avatar?.getAttribute('src')).toBe('/assets/img/avatar.jpg');
-    const links = compiled.querySelectorAll('a');
+  it("should render correctly", () => {
+    const avatar = compiled.querySelector(".avatar");
+    expect(avatar?.getAttribute("src")).toBe("/assets/img/avatar.jpg");
+    const links = compiled.querySelectorAll("a");
     expect(links).toHaveSize(5);
-    expect(links[0]?.innerText.trim()).toBe('Home');
-    expect(links[0]?.getAttribute('routerLink')).toBe('/home');
-    expect(links[1]?.innerText.trim()).toBe('About');
-    expect(links[1]?.getAttribute('routerLink')).toBe('/about');
-    expect(links[2]?.innerText.trim()).toBe('Blog');
-    expect(links[2]?.getAttribute('routerLink')).toBe('/blog');
-    expect(links[3]?.innerText.trim()).toBe('Contact');
-    expect(links[3]?.getAttribute('routerLink')).toBe('/contact');
+    expect(links[0]?.innerText.trim()).toBe("Home");
+    expect(links[0]?.getAttribute("routerLink")).toBe("/home");
+    expect(links[1]?.innerText.trim()).toBe("About");
+    expect(links[1]?.getAttribute("routerLink")).toBe("/about");
+    expect(links[2]?.innerText.trim()).toBe("Blog");
+    expect(links[2]?.getAttribute("routerLink")).toBe("/blog");
+    expect(links[3]?.innerText.trim()).toBe("Contact");
+    expect(links[3]?.getAttribute("routerLink")).toBe("/contact");
   });
 });
